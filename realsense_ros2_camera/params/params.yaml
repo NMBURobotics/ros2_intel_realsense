@@ -1,0 +1,35 @@
+realsense_ros2_camera_node:
+  ros__parameters:
+    serial_no: ""
+    enable_pointcloud: true
+    enable_aligned_pointcloud: false
+    enable_depth: true
+    enable_aligned_depth: true
+    enable_infra1: false
+    enable_infra2: false
+    enable_fisheye: false
+    enable_color: true
+    enable_imu: false
+
+    depth_width: 640
+    depth_height: 480
+    depth_fps: 30
+
+    infra1_width: 640
+    infra1_height: 480
+    infra1_fps: 30
+
+    infra2_width: 640
+    infra2_height: 480
+    infra2_fps: 30
+
+    color_width: 640
+    color_height: 480
+    color_fps: 30
+
+    fisheye_width: 640
+    fisheye_height: 480
+    fisheye_fps: 30
+
+    gyro_fps: 10
+    accel_fps: 10
