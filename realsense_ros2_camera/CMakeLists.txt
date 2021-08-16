@@ -58,11 +58,12 @@ endif()
 
 set(CMAKE_CXX_FLAGS "-fPIE -fPIC -D_FORTIFY_SOURCE=2 -fstack-protector -Wformat -Wformat-security -Wall ${CMAKE_CXX_FLAGS}")
 
+
 find_package(ament_cmake REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(image_transport REQUIRED)
-find_package(librealsense2 REQUIRED)
+find_package(realsense2 REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(realsense_camera_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
@@ -78,11 +79,11 @@ add_executable(${PROJECT_NAME}
   include/${PROJECT_NAME}/constants.hpp
   src/realsense_camera_node.cpp
 )
-
+target_link_libraries(${PROJECT_NAME} realsense2)
 ament_target_dependencies(${PROJECT_NAME}
   cv_bridge
   image_transport
-  librealsense2
+  realsense2
   rclcpp
   realsense_camera_msgs
   std_msgs
