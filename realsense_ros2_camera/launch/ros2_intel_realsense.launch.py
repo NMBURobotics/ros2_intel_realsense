@@ -34,12 +34,5 @@ def generate_launch_description():
             executable='realsense_ros2_camera',
             name='realsense_ros2_camera_node',
             parameters=[default_params],
-            output='screen'),
-
-        # Rviz
-        launch_ros.actions.Node(
-            package='rviz2', 
-            executable='rviz2', 
-            output='screen',
-            arguments=['--display-config', default_rviz]),
+            output='screen')
     ])
